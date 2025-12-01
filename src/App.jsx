@@ -1,0 +1,50 @@
+import React from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+// Componentes
+import ErrorBoundary from "./components/ErrorBoundary";
+
+// Páginas
+import Home from "./pages/home";
+
+import "./main.css";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#006eff",
+      contrastText: "#fff",
+    },
+    secondary: {
+      main: "#e9e9e9",
+      contrastText: "#000",
+    },
+    background: {
+      default: "#eeeeee",
+      paper: "#ffffff",
+    },
+  },
+});
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Router>
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/home" element={<Home />} />
+            <Route path="*" element={<Navigate to="/home" replace />} />
+          </Routes>
+        </ErrorBoundary>
+      </Router>
+    </ThemeProvider>
+  );
+}
+
+export default App;
