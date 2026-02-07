@@ -18,7 +18,7 @@ import "./main.css";
 const theme = createTheme({
   palette: {
     primary: {
-      main: "#006eff",
+      main: "#00e08e",
       contrastText: "#fff",
     },
     secondary: {
@@ -28,6 +28,18 @@ const theme = createTheme({
     background: {
       default: "#eeeeee",
       paper: "#ffffff",
+    },
+    text: {
+      primary: "#00e08e",
+      secondary: "#ffffff",
+    },
+  },
+  typography: {
+    allVariants: {
+      textAlign: "center",
+      fontFamily: "Roboto, sans-serif",
+      fontSize: "1rem",
+      lineHeight: 1.5,
     },
   },
 });
