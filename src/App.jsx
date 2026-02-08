@@ -20,6 +20,7 @@ const theme = createTheme({
     primary: {
       main: "#00e08e",
       contrastText: "#fff",
+      error: "#E53935",
     },
     secondary: {
       main: "#e9e9e9",
@@ -31,7 +32,10 @@ const theme = createTheme({
     },
     text: {
       primary: "#00e08e",
-      secondary: "#ffffff",
+      secondary: "#555555",
+      tertiary: "#ffffff",
+      error: "#E53935",
+      warning: "#FFB300",
     },
   },
   typography: {
@@ -39,7 +43,7 @@ const theme = createTheme({
       textAlign: "center",
       fontFamily: "Roboto, sans-serif",
       fontSize: "1rem",
-      lineHeight: 1.5,
+      lineHeight: 1.4,
     },
   },
 });
